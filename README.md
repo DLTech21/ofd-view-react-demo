@@ -5,7 +5,7 @@
 ### npm 安装
 
 ```
-npm i ofd-view-react -S
+npm i ofd-view-react ofd.js -S
 ```
 
 

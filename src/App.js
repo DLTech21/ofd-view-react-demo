@@ -1,11 +1,9 @@
 import './App.css';
-import OfdView from "ofd-view-react"
-import 'ofd-view-react/dist/viewer.css'
-
+import HelloWorld from "./components/helloworld";
 function App() {
   return (
     <div className="App">
-      <OfdView url="https://gitee.com/ofdrw/ofdrw/raw/master/ofdrw-converter/src/test/resources/999.ofd"></OfdView>
+      <HelloWorld></HelloWorld>
     </div>
   );
 }
