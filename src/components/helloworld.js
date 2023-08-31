@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import OfdView from "ofd-view-react"
-import 'ofd-view-react/dist/viewer.css'
-const mem = require('ofd.js')
+import OfdViewer from 'ofd-view-react';
+const mem = require('parser_x.js')
 
 export default class HelloWorld extends Component {
     constructor(props) {
@@ -11,17 +10,14 @@ export default class HelloWorld extends Component {
         }
     }
 
-
-    componentDidMount() {
-        this.setState({
-            file: 'https://gitee.com/ofdrw/ofdrw/raw/master/ofdrw-converter/src/test/resources/999.ofd'
-        })
-    }
-
     render() {
         return (
             <div className="App">
-                <OfdView file={this.state.file} mem={mem}></OfdView>
+                <OfdViewer file={'https://cmimg.maycur.com/front-static-resource/test/3c51333a0392fe9e47d89dd48e28789d.ofd'}
+                           downloadUrl='https://cmimg.maycur.com/front-static-resource/test/3c51333a0392fe9e47d89dd48e28789d.ofd'
+                           canDownload={true} canPrint={true} canOpen={true}
+                           mem={mem}
+                />
             </div>
         );
     }
