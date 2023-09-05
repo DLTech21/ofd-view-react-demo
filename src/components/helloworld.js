@@ -8,7 +8,6 @@ export default class HelloWorld extends Component {
         super(props);
         this.state = {
             file: '',
-            isP: false
         }
         axios({
             method: 'get',
@@ -16,10 +15,9 @@ export default class HelloWorld extends Component {
             data: {},
             responseType: 'arraybuffer'
         }).then(res => {
-            console.log(res)
-            this.state = {
-                file: 'https://cmimg.maycur.com/front-static-resource/test/3c51333a0392fe9e47d89dd48e28789d.ofd'
-            }
+            this.setState({
+                file: res.data
+            })
         })
     }
 
