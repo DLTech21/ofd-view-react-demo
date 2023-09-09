@@ -5,13 +5,18 @@
 ### npm 安装
 
 ```
-npm i ofd-view-react ofd.js -S
+npm i ofd-view-react parser_x.js -S
 ```
 
 
 ```
 import OfdView from "ofd-view-react";
-import 'ofd-view-react/dist/viewer.css'
+const mem = require('parser_x');
+
+ <OfdViewer file={this.state.file}
+
+                           mem={mem}
+                />
 
 ```
 
